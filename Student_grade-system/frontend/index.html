@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Grade Management</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎓 Student Grade Management System</h1>
+
+    <form id="addStudentForm">
+      <h2>Add Student</h2>
+      <div class="form-group">
+        <input type="text" id="name" placeholder="Student Name" required />
+        <input type="number" id="rollNumber" placeholder="Roll Number" required />
+        <input type="number" id="hindi" placeholder="Hindi Marks" required />
+        <input type="number" id="english" placeholder="English Marks" required />
+        <input type="number" id="math" placeholder="Math Marks" required />
+        <input type="number" id="science" placeholder="Science Marks" required />
+        <input type="number" id="sst" placeholder="SST Marks" required />
+        <button type="submit">➕ Add Student</button>
+      </div>
+    </form>
+
+    <div class="section">
+      <h2>🔍 Search Student Result</h2>
+      <input type="text" id="searchName" placeholder="Enter Student Name" />
+      <button onclick="searchStudent()">Search</button>
+      <div class="output" id="searchResult"></div>
+    </div>
+
+    <div class="section">
+      <h2>❌ Remove Student</h2>
+      <input type="number" id="removeRoll" placeholder="Enter Roll Number" />
+      <button onclick="removeStudent()">Remove</button>
+      <div class="output" id="removeResult"></div>
+    </div>
+
+    <div class="section">
+      <h2>🏆 Top Scorer</h2>
+      <button onclick="getTopper()">Get Topper</button>
+      <div class="output" id="topperResult"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

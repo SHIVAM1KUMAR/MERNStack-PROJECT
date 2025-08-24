@@ -1,0 +1,113 @@
+/* ========== General Styles ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.testimonials-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  min-height: 100vh;
+}
+
+.testimonial-card {
+  width: 280px;
+  height: 400px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  perspective: 1000px;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05);
+}
+
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  clip-path: circle(150px at 50% 0%);
+  transition: all 0.4s ease-in-out;
+  z-index: 1;
+}
+
+.testimonial-card:hover::before {
+  clip-path: circle(300px at 50% 50%);
+}
+
+.testimonial-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  object-fit: cover;
+  margin-top: 20px;
+  z-index: 2;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-card:hover img {
+  transform: scale(1.1);
+}
+
+.testimonial-card h3 {
+  margin: 15px 0 5px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  z-index: 2;
+  position: relative;
+}
+
+.role {
+  font-size: 1rem;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.feedback {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.testimonial-card:hover .feedback {
+  color: #000;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .testimonials-container {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .testimonial-card {
+    width: 100%;
+    max-width: 350px;
+    margin: 10px auto;
+  }
+}

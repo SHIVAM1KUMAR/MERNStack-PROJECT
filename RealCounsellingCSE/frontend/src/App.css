@@ -1,0 +1,202 @@
+/* General body and html styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%; /* Ensure body and html take full width */
+  height: 100%; /* Full viewport height */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: Arial, sans-serif; /* Clean, modern font */
+  box-sizing: border-box; /* Ensure consistent box sizing */
+}
+
+/* General header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  width: 100%; /* Ensure header spans full width */
+  box-sizing: border-box; /* Prevent overflow from padding */
+  position: sticky; /* Stick header to top */
+  top: 0;
+  z-index: 1000; /* Ensure header stays above content */
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff7f50; /* Highlight link on hover */
+}
+
+/* Enquiry form styles */
+form {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  font-size: 1rem;
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* General footer styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%; /* Ensure footer spans full width */
+  box-sizing: border-box; /* Prevent overflow from padding */
+  position: relative; /* Ensure footer stays at the bottom */
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+footer a {
+  color: #ff7f50;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #ffa07a; /* Lighter hover color */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  /* Header and navigation adjustments */
+  header {
+    flex-direction: column; /* Stack logo and nav */
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.2rem; /* Reduce logo size */
+    margin-bottom: 10px; /* Add spacing between logo and nav */
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Adjust spacing */
+  }
+
+  /* Footer adjustments */
+  footer p {
+    font-size: 0.9rem; /* Adjust footer text size */
+  }
+
+  /* Enquiry form adjustments */
+  form {
+    padding: 15px;
+    box-shadow: none; /* Remove shadow for smaller screens */
+  }
+
+  form h2 {
+    font-size: 1.3rem;
+  }
+
+  form input,
+  form textarea {
+    font-size: 0.9rem;
+  }
+}
+
+/* For mobile devices (less than 500px) */
+@media screen and (max-width: 500px) {
+  .logo {
+    font-size: 1rem; /* Further reduce logo size */
+  }
+
+  .nav-links {
+    font-size: 0.9rem; /* Adjust nav link size */
+  }
+
+  footer p {
+    font-size: 0.8rem; /* Adjust footer text size */
+  }
+
+  form h2 {
+    font-size: 1.1rem;
+  }
+
+  form input,
+  form textarea {
+    font-size: 0.8rem;
+  }
+}

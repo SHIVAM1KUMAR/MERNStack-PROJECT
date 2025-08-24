@@ -1,0 +1,129 @@
+/* State Filter Section */
+.state-filter {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #0f3460); /* Enhanced gradient for depth */
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Stronger shadow for emphasis */
+  transition: all 0.3s ease-in-out; /* Smooth hover transitions */
+  margin: 20px auto; /* Centered for all screen sizes */
+  max-width: 600px; /* Width constraint for larger screens */
+  width: 90%; /* Dynamic width for smaller screens */
+}
+
+.state-filter:hover {
+  transform: translateY(-5px); /* Subtle lift on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Dynamic shadow on hover */
+}
+
+.state-filter h2 {
+  font-size: 2rem; /* Slightly larger for emphasis */
+  margin-bottom: 20px;
+  color: #ffcc80; /* Warm, inviting color */
+  text-align: center;
+}
+
+.state-filter select {
+  width: 100%; /* Full width for responsiveness */
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  border: 1px solid #d7ccc8;
+  border-radius: 10px;
+  background: #3e2723; /* Warm background */
+  color: #ffcc80;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  transition: all 0.3s ease-in-out;
+}
+
+.state-filter select:focus {
+  border-color: #ffcc80;
+  box-shadow: 0 0 10px rgba(255, 204, 128, 0.8); /* Glowing border on focus */
+  outline: none;
+}
+
+/* Colleges List Section */
+.colleges-list {
+  margin-top: 30px;
+}
+
+.colleges-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.colleges-list li {
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for list items */
+}
+
+.colleges-list li:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.03); /* Subtle growth on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+.colleges-list a {
+  text-decoration: none;
+  color: #ffab40; /* Warm orange for links */
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.colleges-list a:hover {
+  text-decoration: underline;
+  color: #ffe0b2; /* Lighter orange on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .state-filter {
+    padding: 15px; /* Reduced padding for smaller screens */
+    border-radius: 10px;
+  }
+
+  .state-filter h2 {
+    font-size: 1.6rem; /* Slightly smaller heading for tablets */
+  }
+
+  .state-filter select {
+    font-size: 1rem; /* Adjusted font size for better fit */
+    padding: 12px 15px; /* Adjusted padding */
+  }
+
+  .colleges-list li {
+    padding: 12px; /* Reduced padding for compact layout */
+  }
+
+  .colleges-list a {
+    font-size: 1rem; /* Smaller font for links on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .state-filter {
+    padding: 10px; /* Compact padding for very small screens */
+  }
+
+  .state-filter h2 {
+    font-size: 1.4rem; /* Smaller heading */
+  }
+
+  .state-filter select {
+    font-size: 0.9rem; /* Compact input size */
+    padding: 10px 12px;
+  }
+
+  .colleges-list li {
+    padding: 10px; /* Compact padding */
+  }
+
+  .colleges-list a {
+    font-size: 0.9rem; /* Compact font size for smaller links */
+  }
+}

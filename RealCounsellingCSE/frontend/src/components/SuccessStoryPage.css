@@ -1,0 +1,286 @@
+/* General Container */
+.success-stories-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Hero Section */
+.success-hero-section {
+  text-align: center;
+  background: linear-gradient(135deg, #4facfe, #00f2fe, #6a11cb);
+  padding: 70px 20px;
+  color: white;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 1.5s ease-out;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.success-hero-section::before,
+.success-hero-section::after {
+  content: '';
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  filter: blur(80px);
+  border-radius: 50%;
+  animation: float 10s infinite ease-in-out;
+}
+
+.success-hero-section::before {
+  top: -100px;
+  left: -80px;
+  width: 300px;
+  height: 300px;
+}
+
+.success-hero-section::after {
+  bottom: -100px;
+  right: -80px;
+  width: 200px;
+  height: 200px;
+}
+
+.success-hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeInDown 1.5s ease-out;
+  text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.success-hero-subtitle {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  font-weight: 300;
+  opacity: 0.9;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+/* Content Section */
+.success-content-section {
+  margin-top: 50px;
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Story Cards */
+.story-card {
+  background: linear-gradient(145deg, #ffffff, rgba(255, 255, 255, 0.8));
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.story-card h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.story-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.rating {
+  color: #ffc107;
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+
+/* Testimonial Form */
+.testimonial-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  width: 100%; /* Ensure it adapts to smaller screens */
+  margin: auto;
+  margin-top: 40px;
+  background: linear-gradient(145deg, #ffffff, rgba(255, 255, 255, 0.8));
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1.5s ease-out;
+  box-sizing: border-box; /* Prevent overflow issues */
+}
+
+.testimonial-form input,
+.testimonial-form textarea,
+.testimonial-form select {
+  padding: 15px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%; /* Full width for responsiveness */
+  box-sizing: border-box; /* Include padding in width calculations */
+}
+
+.testimonial-form input:focus,
+.testimonial-form textarea:focus,
+.testimonial-form select:focus {
+  border-color: #4facfe;
+  box-shadow: 0 0 10px rgba(79, 172, 254, 0.3);
+}
+
+.testimonial-form textarea {
+  height: 150px;
+  resize: none;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%; /* Full width on smaller devices */
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #00f2fe, #4facfe);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design for Form */
+@media (max-width: 768px) {
+  .testimonial-form {
+    padding: 20px; /* Reduced padding for smaller screens */
+  }
+
+  .testimonial-form input,
+  .testimonial-form textarea,
+  .testimonial-form select {
+    font-size: 0.9rem;
+    padding: 12px; /* Adjusted padding for better spacing */
+  }
+
+  .submit-btn {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-form {
+    padding: 15px; /* Further reduced padding for very small screens */
+  }
+
+  .testimonial-form input,
+  .testimonial-form textarea,
+  .testimonial-form select {
+    font-size: 0.85rem;
+    padding: 10px; /* Compact input sizes */
+  }
+
+  .submit-btn {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .success-hero-title {
+    font-size: 2.5rem;
+  }
+
+  .stories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-form {
+    padding: 20px;
+  }
+
+  .testimonial-form input,
+  .testimonial-form textarea,
+  .testimonial-form select {
+    font-size: 0.9rem;
+  }
+
+  .submit-btn {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .success-hero-title {
+    font-size: 2rem;
+  }
+
+  .story-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .story-card p {
+    font-size: 0.9rem;
+  }
+}
